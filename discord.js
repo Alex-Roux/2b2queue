@@ -1,6 +1,7 @@
 ﻿const fs = require('fs');
 const Discord = require('discord.js');
 const main = require('./main.js');
+
 const bot = new Discord.Client();
 
 
@@ -28,7 +29,7 @@ function log(string, formalized) {;
 	var date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')
 	if(formalized) date = ('[' + date + ' GMT]    [Bot thread] ');
 	var logLine = date + string;
-	log(logLine);
+	console.log(logLine);
 	
 	fs.appendFile('latest.log', logLine + "\r\n", function (err) {if (err) throw err;});
 }
