@@ -1,3 +1,4 @@
+const fs = require('fs');
 const mc = require('minecraft-protocol');
 const main = require('./main.js');
 var server = mc.createServer({
@@ -15,7 +16,7 @@ log('Server has started.', 1);
 
 function log(string, formalized) {;
 	var date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')
-	if(formalized) date = ('[' + date + ' GMT] ');
+	if(formalized) date = ('[' + date + ' GMT] [Server thread] ');
 	var logLine = date + string;
 	console.log(logLine);
 	

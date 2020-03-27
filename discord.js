@@ -26,7 +26,7 @@ bot.on("ready", function () {
 
 function log(string, formalized) {;
 	var date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')
-	if(formalized) date = ('[' + date + ' GMT] ');
+	if(formalized) date = ('[' + date + ' GMT]    [Bot thread] ');
 	var logLine = date + string;
 	log(logLine);
 	
