@@ -1,6 +1,9 @@
 ﻿const fs = require('fs');
 const Discord = require('discord.js');
+const mcinfo = require('mcinfo');
+
 const main = require('./main.js');
+
 
 const bot = new Discord.Client();
 
@@ -80,6 +83,9 @@ bot.on("message", message => {
 			client.destroy();
 			log("Disconnecting.", 1);
 			process.exit()
+		}
+		if (message.content == config.discordParameters.prefix + "addaccount") {
+			
 		}
 	}
 });
