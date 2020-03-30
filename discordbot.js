@@ -89,3 +89,17 @@ bot.on("message", message => {
 		}
 	}
 });
+
+/*
+			mcinfo.isValid(playerUsername, function(valid) {
+			if(valid) {
+				log(playerUsername + ' is valid', 1);
+				var mcinfo = require('mcinfo');
+				mcinfo.getMinecraftProfile(playerUsername, function(profile) {
+					log(profile.id, 1);
+				});
+			} else {
+				console.log('User notch is not valid!');
+			}
+			});
+*/
