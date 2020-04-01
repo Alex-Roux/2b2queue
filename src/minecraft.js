@@ -53,3 +53,6 @@ server.on('login', function(client) {
   client.write("chat", { message: JSON.stringify(msg), position: 0 });
   log('Player joined.', 1);
 });
+
+
+
