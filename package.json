@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Alex-Roux/mc-queue/issues"
   },
-  "homepage": "https://github.com/Alex-Roux/mc-queue#readme"
+  "homepage": "https://github.com/Alex-Roux/mc-queue#readme",
+  "dependencies": {
+    "discord.js": "^12.1.1"
+  }
 }
