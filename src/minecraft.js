@@ -56,3 +56,11 @@ server.on('login', function(client) {
 
 
 
+
+var client = mc.createClient({
+  username: "",
+  password: "",
+  host: '2b2t.org',
+  port: 25565,
+  version: "1.12.2"
+});
