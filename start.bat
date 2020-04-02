@@ -1,1 +1,1 @@
-node src/main/main.js
+node src/main/start.js
