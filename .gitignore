@@ -1,7 +1,5 @@
-*.log
 *.secret.*
-
-
+config.json
 
 # Logs
 logs
@@ -107,4 +105,3 @@ dist
 
 # TernJS port file
 .tern-port
-src/main/config.json
