@@ -1,0 +1,11 @@
+{
+	"debugMode": true,
+	"discordParameters": {
+		"discordToken": "",
+		"logChannel": "",	
+		"prefix": "$"
+	},
+	"serverParameters": {
+	
+	}
+}
