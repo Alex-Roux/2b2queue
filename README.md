@@ -14,15 +14,11 @@ You can use this on an host to
 This bot is hosted [here](https://discord.gg/dCqRn7K) but you can host your own instance.
 
 ## Features
-
 -  Debbuging / management console
 -  SOON - Automatic enqueuing
 
 ## Setup
-
-
 ### Packages
-
 -  node.js
 -  discord.js
 -  node-rsa
@@ -32,8 +28,8 @@ This bot is hosted [here](https://discord.gg/dCqRn7K) but you can host your own 
  
  ## To-do list
  
--  Account management / ciphering
--  Automatic enqueueing
+ -  Account management / ciphering
+ -  Automatic enqueueing
 
 ## Support
 
