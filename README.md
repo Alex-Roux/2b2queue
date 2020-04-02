@@ -1,4 +1,7 @@
 # 2b2queue
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c8675b2e4b35405fbb8a273193ae384a)](https://app.codacy.com/manual/Alex-Roux/2b2queue?utm_source=github.com&utm_medium=referral&utm_content=Alex-Roux/2b2queue&utm_campaign=Badge_Grade_Dashboard)
+
 ![badge](https://img.shields.io/badge/license-cc_by_nc_4.0-blue)
 ![badge](https://img.shields.io/badge/node-v.13.11.0-red)
 
