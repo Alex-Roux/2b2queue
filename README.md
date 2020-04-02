@@ -1,6 +1,6 @@
 # 2b2queue
-
-[logo]: https://img.shields.io/badge/license-cc_by_nc_4.0-blue "License"
+![badge](https://img.shields.io/badge/license-cc_by_nc_4.0-blue)
+![badge](https://img.shields.io/badge/node-v.13.11.0-red)
 
 2b2queue is a remote-controlled proxy to skip 2b2t queue.
 ## Usage
@@ -10,27 +10,27 @@ You can use this on an host to
 This bot is hosted [here](https://discord.gg/dCqRn7K) but you can host your own 
 
 ## Features
- + Debbuging / management console
- + SOON - Automatic enqueuing
++ Debbuging / management console
++ SOON - Automatic enqueuing
 ## Setup
 
 
 ### Packages
- + node.js
- + discord.js
- + node-rsa
- + mcinfo
- + minecraft-protocol
- + json-cypher-value
++ node.js
++ discord.js
++ node-rsa
++ mcinfo
++ minecraft-protocol
++ json-cypher-value
  
  
  ## To-do list
- + Account management / ciphering
- + Automatic enqueueing
- 
- ## Support
- You can seek support on the discord server, or directly by creating a new issue complying with [these rules](shorturl.at/oFLQX).
- 
- Software under [CC-BY-NC 4.0](http://creativecommons.org/licenses/by-nc/4.0/) and the sacred [DONT-BE-A-DICK](shorturl.at/oFLQX) licenses.
- 
- <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
++ Account management / ciphering
++ Automatic enqueueing
+
+## Support
+You can seek support on the discord server, or directly by creating a new issue complying with [these rules](shorturl.at/oFLQX).
+
+Software under [CC-BY-NC 4.0](http://creativecommons.org/licenses/by-nc/4.0/) and the sacred [DONT-BE-A-DICK](shorturl.at/oFLQX) licenses.
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
