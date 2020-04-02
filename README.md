@@ -23,12 +23,12 @@ This bot is hosted [here](https://discord.gg/dCqRn7K) but you can host your own 
 
 ### Packages
 
- - node.js
- - discord.js
- - node-rsa
- - mcinfo
- - minecraft-protocol
- - json-cypher-value
+- node.js
+- discord.js
+- node-rsa
+- mcinfo
+- minecraft-protocol
+- json-cypher-value
  
  ## To-do list
  
