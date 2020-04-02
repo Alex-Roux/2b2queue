@@ -30,7 +30,6 @@ This bot is hosted [here](https://discord.gg/dCqRn7K) but you can host your own 
  - minecraft-protocol
  - json-cypher-value
  
- 
  ## To-do list
  
 + Account management / ciphering
