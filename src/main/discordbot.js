@@ -12,8 +12,8 @@ const bot = new Discord.Client();
 
 main.log("Initializing...", 1);
 
-var config = JSON.parse(fs.readFileSync('../../config.json', 'utf8'));
-if (config.debugMode) log("config.json parsed", 1);
+var config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
+if (config.debugMode) main.log("config.json parsed", 1);
 
 bot.login(config.discordParameters.discordToken);
 
