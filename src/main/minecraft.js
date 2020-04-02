@@ -53,3 +53,14 @@ server.on('login', function(client) {
   client.write("chat", { message: JSON.stringify(msg), position: 0 });
   log('Player joined.', 1);
 });
+
+
+
+
+var client = mc.createClient({
+  username: "",
+  password: "",
+  host: '2b2t.org',
+  port: 25565,
+  version: "1.12.2"
+});

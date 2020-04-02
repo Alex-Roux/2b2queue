@@ -1,5 +1,5 @@
-*.log
 *.secret.*
+config.json
 
 # Logs
 logs

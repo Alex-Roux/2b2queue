@@ -48,7 +48,7 @@ bot.on("message", message => {
 					"title": "mc-queue help display",
 					"description": "mc-queue is a discord bot.\r\nThe prefix is " + config.discordParameters.prefix + ".",
 					"footer": {
-						"text": "Developped by jenn#1040. - Not available on Github yet."
+						"text": "Developped by jenn#1040. - Available on Github."
 					},
 					"fields":
 					[
