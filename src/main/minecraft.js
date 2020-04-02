@@ -1,4 +1,3 @@
-const fs = require('fs');
 const mc = require('minecraft-protocol');
 const main = require('./main.js');
 var server = mc.createServer({
@@ -11,17 +10,7 @@ var server = mc.createServer({
 });
 
 
-log('Server has started.', 1);
-
-
-function log(string, formalized) {;
-	var date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')
-	if(formalized) date = ('[' + date + ' GMT] [Server thread] ');
-	var logLine = date + string;
-	console.log(logLine);
-	
-	fs.appendFile('latest.log', logLine + "\r\n", function (err) {if (err) throw err;});
-}
+main.log('Server has started.', 2);
 
 
 server.on('login', function(client) {
@@ -51,7 +40,7 @@ server.on('login', function(client) {
     ]
   };
   client.write("chat", { message: JSON.stringify(msg), position: 0 });
-  log('Player joined.', 1);
+  main.log('Player joined.', 2);
 });
 
 

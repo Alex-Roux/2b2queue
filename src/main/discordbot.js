@@ -2,19 +2,15 @@
 const Discord = require('discord.js');
 const mcinfo = require('mcinfo');
 
-const main = require('./main.js');
+var main = require('./main.js');
 
 
 const bot = new Discord.Client();
 
 
-fs.writeFile('latest.log', 'latest.log\r\n', (err) => {
-	if (err) throw err;
-	if (config.debugMode)log('Data cleared.', 1);
-});
 
 
-log("Initializing...", 1);
+main.log("Initializing...", 1);
 
 var config = JSON.parse(fs.readFileSync('../../config.json', 'utf8'));
 if (config.debugMode) log("config.json parsed", 1);
@@ -23,26 +19,17 @@ bot.login(config.discordParameters.discordToken);
 
 
 bot.on("ready", function () {
-	log("Bot connected.", 1);
+	main.log("Bot connected.", 1);
 	bot.user.setActivity('Unavailable');
-})
+});
 
-
-function log(string, formalized) {;
-	var date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')
-	if(formalized) date = ('[' + date + ' GMT]    [Bot thread] ');
-	var logLine = date + string;
-	console.log(logLine);
-	
-	fs.appendFile('../../latest.log', logLine + "\r\n", function (err) {if (err) throw err;});
-}
-
+main.log("Ready.", 1);
 
 bot.on("message", message => {
 	if (message.content[0] == config.discordParameters.prefix) {
 		
 		if(message.content == config.discordParameters.prefix + "help") {
-			log(message.author.tag + " issued help.", 1);
+			main.log(message.author.tag + " issued help.", 1);
 			message.channel.send({
 				"embed": {
 					"title": "mc-queue help display",
@@ -81,7 +68,7 @@ bot.on("message", message => {
 		
 		if (message.content == config.discordParameters.prefix + "stop") {
 			client.destroy();
-			log("Disconnecting.", 1);
+			main.log("Disconnecting.", 1);
 			process.exit()
 		}
 		if (message.content == config.discordParameters.prefix + "addaccount") {
@@ -93,10 +80,10 @@ bot.on("message", message => {
 /*
 			mcinfo.isValid(playerUsername, function(valid) {
 			if(valid) {
-				log(playerUsername + ' is valid', 1);
+				main.log(playerUsername + ' is valid', 1);
 				var mcinfo = require('mcinfo');
 				mcinfo.getMinecraftProfile(playerUsername, function(profile) {
-					log(profile.id, 1);
+					main.log(profile.id, 1);
 				});
 			} else {
 				console.log('User notch is not valid!');
