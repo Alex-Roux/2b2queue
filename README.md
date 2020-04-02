@@ -11,12 +11,12 @@
 2b2queue is controlled using the Discord interface (through private messages).
 You can use this on an host to 
 
-This bot is hosted [here](https://discord.gg/dCqRn7K) but you can host your own 
+This bot is hosted [here](https://discord.gg/dCqRn7K) but you can host your own instance.
 
 ## Features
 
-+ Debbuging / management console
-+ SOON - Automatic enqueuing
+ + Debbuging / management console
+ + SOON - Automatic enqueuing
 
 ## Setup
 
