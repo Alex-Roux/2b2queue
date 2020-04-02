@@ -53,7 +53,7 @@ bot.on("message", message => {
 						}
 					]
 				}
-			});
+			}.catch(error => { throw error}));
 		}
 		
 		if(message.content.indexOf("settings")) {
