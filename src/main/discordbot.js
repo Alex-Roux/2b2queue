@@ -16,7 +16,7 @@ fs.writeFile('latest.log', 'latest.log\r\n', (err) => {
 
 log("Initializing...", 1);
 
-var config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
+var config = JSON.parse(fs.readFileSync('../../config.json', 'utf8'));
 if (config.debugMode) log("config.json parsed", 1);
 
 bot.login(config.discordParameters.discordToken);
@@ -34,7 +34,7 @@ function log(string, formalized) {;
 	var logLine = date + string;
 	console.log(logLine);
 	
-	fs.appendFile('latest.log', logLine + "\r\n", function (err) {if (err) throw err;});
+	fs.appendFile('../../latest.log', logLine + "\r\n", function (err) {if (err) throw err;});
 }
 
 
