@@ -1,7 +1,6 @@
 *.log
 *.secret.*
 
-config.json # use config.json.example instead
 
 # Logs
 logs
