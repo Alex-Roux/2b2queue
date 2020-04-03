@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const mcinfo = require('mcinfo');
 
 var main = require('./main.js');
-
+//const embeds = require('./embeds.json');
 
 const bot = new Discord.Client();
 
@@ -11,6 +11,9 @@ const bot = new Discord.Client();
 
 
 main.log("Initializing...", 1);
+
+var embeds = JSON.parse(fs.readFileSync('src/main/embeds.json', 'utf8'));
+
 
 var config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 if (config.debugMode) main.log("config.json parsed", 1);
@@ -29,31 +32,7 @@ bot.on("message", message => {
 	if (message.content[0] == config.discordParameters.prefix) {
 		
 		if(message.content == config.discordParameters.prefix + "help") {
-			main.log(message.author.tag + " issued help.", 1);
-			message.channel.send({
-				"embed": {
-					"title": "mc-queue help display",
-					"description": "mc-queue is a discord bot.\r\nThe prefix is " + config.discordParameters.prefix + ".",
-					"footer": {
-						"text": "Developped by jenn#1040. - Available on Github."
-					},
-					"fields":
-					[
-						{
-							"name": "help",
-							"value": "do you really need to know that ?"
-						},
-						{
-							"name": "settings",
-							"value": "Changes configuration"
-							},
-						{
-							"name": "stop",
-							"value": "DISABLED - Stops the bot."
-						}
-					]
-				}
-			}.catch(error => { throw error}));
+			message.channel.send(embeds.help)//.catch(error => { throw error}));
 		}
 		
 		if(message.content.indexOf("settings")) {
@@ -72,7 +51,11 @@ bot.on("message", message => {
 			process.exit()
 		}
 		if (message.content == config.discordParameters.prefix + "addaccount") {
-			
+			message.author.send(embeds.addaccount.step1)
+				.then(sentMessage => sentMessage.delete({ timeout: 60000 }))
+				.catch(error => {
+				// handle error
+			});
 		}
 	}
 });
