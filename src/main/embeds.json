@@ -1,0 +1,57 @@
+{
+	"help": {
+		"embed": {
+			"title": "mc-queue help display",
+			"description": "mc-queue is a discord bot.\r\nThe prefix is ${config.discordParameters.prefix}.",
+			"footer": {
+				"text": "Developped by jenn#1040. - Available on Github."
+			},
+			"fields":
+			[
+				{
+					"name": "help",
+					"value": "do you really need to know that ?"
+				},
+				{
+					"name": "settings",
+					"value": "Changes configuration"
+					},
+				{
+					"name": "stop",
+					"value": "DISABLED - Stops the bot."
+				}
+			]
+		}
+	},
+	"addaccount": {
+		"step1": {
+			"embed": {
+				"title": "Add an account",
+				"description": "Type your username.",
+				"color": 127255,
+				"footer": {
+				  "text": "This request will expire in 1 minute."
+				},
+				"fields": [
+				  {
+					"name": "_ _",
+					"value": "Your data, such as your password will be encrypted."
+				  }
+				]
+			}
+		}
+	},
+	"step2": {
+		
+	}
+	"password": {
+ 		"embed": {
+   			"title": "Enter password",
+    			"description": "XXXX",
+    			"color": 5168631
+  		}
+	}	
+		
+		
+	
+}
