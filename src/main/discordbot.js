@@ -29,7 +29,8 @@ bot.on("ready", function () {
 main.log("Ready.", 1);
 
 bot.on("message", message => {
-	if (message.content[0] == config.discordParameters.prefix) {
+	if (message.content[0] === config.discordParameters.prefix) {
+		main.log(message.author.tag + " issued " + message.content + ".", 1);
 		
 		if(message.content == config.discordParameters.prefix + "help") {
 			message.channel.send(embeds.help)//.catch(error => { throw error}));
@@ -46,7 +47,7 @@ bot.on("message", message => {
 		}
 		
 		if (message.content == config.discordParameters.prefix + "stop") {
-			client.destroy();
+			bot.destroy();
 			main.log("Disconnecting.", 1);
 			process.exit()
 		}
