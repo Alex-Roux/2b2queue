@@ -28,8 +28,8 @@ This bot is hosted [here](https://discord.gg/dCqRn7K) but you can host your own 
  
  ## To-do list
  
--  Account management / ciphering
--  Automatic enqueueing
+- Account management / ciphering
+- Automatic enqueueing
 
 ## Support
 
