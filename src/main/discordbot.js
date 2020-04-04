@@ -13,7 +13,7 @@ const bot = new Discord.Client();
 main.log("Initializing...", 1);
 
 var embeds = JSON.parse(fs.readFileSync('src/main/embeds.json', 'utf8'));
-
+var accounts = JSON.parse(fs.readFileSync('src/main/accounts.secret.json', 'utf8'));
 
 var config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 if (config.debugMode) main.log("config.json parsed", 1);
