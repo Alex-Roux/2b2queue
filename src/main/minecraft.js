@@ -40,6 +40,39 @@ server.on('login', function(client) {
 	client.write("chat", { message: JSON.stringify(msg), position: 0 });
 	main.log('Player joined.', 2);
 });
+	
+var client = mc.createClient({
+	username: "",
+	password: "",
+	host: '2b2t.org',
+	port: 25565,
+	version: "1.12.2"
+});
+minecraftData.inQueue = true;
+minecraftData.creatingTimestamp = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '').split(' ')[1];
+main.log('Client generated.',  3);
+
+
+
+client.on("packet", (data, meta) => {	
+	if (meta.name === "playerlist_header") {
+		var headerMessage = JSON.parse(data.header);
+		minecraftData.positionInQueue = headerMessage.text.split("\n")[5].substring(25);
+		minecraftData.ETA = headerMessage.text.split("\n")[6].substring(27);
+		main.log('Position in queue: ' + minecraftData.positionInQueue + ' | ETA : ' + minecraftData.ETA, 3);
+		//console.log(minecraftData);
+	}
+	// if (meta.name === "chat") {
+		// main.log('Raw message : ' + data.message, 3);
+		
+		// if(data.message.text === "2b2t is full"){
+			// inQueue = true;
+			// main.log('ok', 3);
+		// }
+		
+		// if(inQueue) main.log('pos : ' + data.message['extra'][1]['text'], 3);
+	// }
+	// main.log(data.message, 3);
 });
 
 
