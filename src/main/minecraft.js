@@ -1,5 +1,18 @@
 const mc = require('minecraft-protocol');
 const main = require('./main.js');
+
+var client;
+
+var minecraftData = {
+	inQueue: false,
+	positionInQueue: undefined,
+	ETA: undefined,
+	creatingTimestamp: undefined
+};
+exports.getMinecraftData = function() {
+  return minecraftData;
+};
+
 var server = mc.createServer({
   'online-mode': true,
   encryption: true,
