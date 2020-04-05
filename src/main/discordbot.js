@@ -18,6 +18,7 @@ var embeds = JSON.parse(fs.readFileSync('src/main/embeds.json', 'utf8'));
 var config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 if (config.debugMode) main.log("All .json are parsed", 1);
 
+main.log("Connecting...", 1);
 bot.login(config.discordParameters.discordToken);
 
 
