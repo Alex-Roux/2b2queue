@@ -73,7 +73,6 @@ client.on("packet", (data, meta) => {
 		minecraftData.positionInQueue = headerMessage.text.split("\n")[5].substring(25);
 		minecraftData.ETA = headerMessage.text.split("\n")[6].substring(27);
 		main.log('Position in queue: ' + minecraftData.positionInQueue + ' | ETA : ' + minecraftData.ETA, 3);
-		//console.log(minecraftData);
 	}
 	// if (meta.name === "chat") {
 		// main.log('Raw message : ' + data.message, 3);
