@@ -59,6 +59,36 @@ bot.on("message", message => {
 				// handle error
 			});
 		}
+		
+		if(message.content == config.discordParameters.prefix + "status") {
+			var minecraftData = minecraft.getMinecraftData();
+			message.channel.send({
+			  "embed": {
+				"title": "'s status",
+				"description": "_ _",
+				"color": 1884018,
+				"footer": {
+				  "text": "BlackGems"
+				},
+				"fields": [
+				  {
+					"name": minecraftData.creatingTimestamp,
+					"value": "Enqueued"
+				  },
+				  {
+					"name": minecraftData.positionInQueue,
+					"value": "Position in queue",
+					"inline": true
+				  },
+				  {
+					"name": minecraftData.ETA,
+					"value": "ETA",
+					"inline": true
+				  }
+				]
+			  }
+			});
+		}
 	}
 });
 
