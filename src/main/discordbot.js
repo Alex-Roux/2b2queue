@@ -1,6 +1,7 @@
 ﻿const fs = require('fs');
 const Discord = require('discord.js');
-const mcinfo = require('mcinfo');
+var mcinfo = require('mcinfo');
+
 
 var main = require('./main.js');
 var minecraft = require('./minecraft.js');
@@ -52,6 +53,7 @@ bot.on("message", message => {
 			main.log("Disconnecting.", 1);
 			process.exit()
 		}
+		
 		if (message.content == config.discordParameters.prefix + "addaccount") {
 			message.author.send(embeds.addaccount.step1)
 				.then(sentMessage => sentMessage.delete({ timeout: 60000 }))

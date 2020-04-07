@@ -34,7 +34,6 @@ server.on('login', function(client) {
 		maxPlayers: server.maxPlayers,
 		reducedDebugInfo: false
     });
-  
     client.write('position', {
 		x: 0,
 		y: 1.62,
