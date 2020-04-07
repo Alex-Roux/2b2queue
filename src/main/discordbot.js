@@ -5,11 +5,12 @@ var mcinfo = require('mcinfo');
 
 var main = require('./main.js');
 var minecraft = require('./minecraft.js');
-
+var accounts = require('./accounts.secret.json');
 
 const bot = new Discord.Client();
 
 
+var clientID;
 
 
 main.log("Initializing...", 1);
@@ -55,6 +56,7 @@ bot.on("message", message => {
 		}
 		
 		if (message.content == config.discordParameters.prefix + "addaccount") {
+			var author = message.author;
 			message.author.send(embeds.addaccount.step1)
 				.then(sentMessage => sentMessage.delete({ timeout: 60000 }))
 				.catch(error => {
@@ -62,34 +64,54 @@ bot.on("message", message => {
 			});
 		}
 		
-		if(message.content == config.discordParameters.prefix + "status") {
-			var minecraftData = minecraft.getMinecraftData();
-			message.channel.send({
-			  "embed": {
-				"title": "'s status",
-				"description": "_ _",
-				"color": 1884018,
-				"footer": {
-				  "text": "BlackGems"
-				},
-				"fields": [
-				  {
-					"name": minecraftData.creatingTimestamp,
-					"value": "Enqueued"
-				  },
-				  {
-					"name": minecraftData.positionInQueue,
-					"value": "Position in queue",
-					"inline": true
-				  },
-				  {
-					"name": minecraftData.ETA,
-					"value": "ETA",
-					"inline": true
-				  }
-				]
-			  }
-			});
+		if (message.content.startsWith(config.discordParameters.prefix + "startqueue")) {
+			var commandParameters = message.content.split(' ');
+			if(commandParameters[1] !== undefined){
+				minecraft.createClient(commandParameters[1]);
+			} else {
+				main.log('ID not provided.', 1);
+			}
+		}
+		
+		if(message.content.startsWith(config.discordParameters.prefix + "status")) {
+			var commandParameters = message.content.split(' ');
+			if(commandParameters[1] !== undefined){
+				mcinfo.getPlayerInformation(accounts.accounts[commandParameters[1]].uuid, function(player) {
+					var minecraftData = minecraft.getMinecraftData();
+					message.channel.send({
+					  "embed": {
+						"title": player.name + "'s status",
+						"description": "Status : `Enqueued`",
+						"color": 6663363,
+						"thumbnail": {
+						  "url": "https://minotar.net/helm/" + player.name + "/150.png"
+						},
+						"footer": {
+						  "text": message.author.tag + " - Player UUID : " + accounts.accounts[0].uuid
+						},
+						"fields": [
+						  {
+							"name": minecraftData.creatingTimestamp + " GMT",
+							"value": "Enqueued since"
+						  },
+						  {
+							"name": minecraftData.positionInQueue,
+							"value": "Position in queue",
+							"inline": true
+						  },
+						  {
+							"name": minecraftData.ETA,
+							"value": "ETA",
+							"inline": true
+						  }
+						]
+					  }
+			
+					});
+				});
+			} else {
+				main.log('ID not provided.', 1);
+			}
 		}
 	}
 });
