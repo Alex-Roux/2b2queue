@@ -33,8 +33,8 @@ This bot is hosted [here](https://discord.gg/dCqRn7K) but you can host your own 
 
 ## Support
 
-You can seek support on the discord server, or directly by creating a new issue complying with [these rules](shorturl.at/oFLQX).
+You can seek support on the discord server, or directly by creating a new issue complying with [these rules](http://shorturl.at/oFLQX).
 
-Software under [CC-BY-NC 4.0](http://creativecommons.org/licenses/by-nc/4.0/) and the sacred [DONT-BE-A-DICK](shorturl.at/oFLQX) licenses.
+Software under [CC-BY-NC 4.0](http://creativecommons.org/licenses/by-nc/4.0/) and the sacred [DONT-BE-A-DICK](http://shorturl.at/oFLQX) licenses.
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
